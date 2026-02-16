@@ -1,28 +1,20 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --blue-robot: #3b82f6;
-  --war-room: #020617;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
+/* Your custom global styles go here */
 body {
-  background-color: #020617;
-  color: white;
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  margin: 0;
-  overflow-x: hidden;
-}
-
-.glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.meter-fill {
-  height: 100%;
-  background: #3b82f6;
-  box-shadow: 0 0 20px #3b82f6;
-  transition: width 0.1s ease-out;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
